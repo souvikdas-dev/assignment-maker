@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Maker</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+        :root {
+            --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+                "Noto Color Emoji";
+        }
+
+        body {
+            font-family: "Ubuntu", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <main>
+            <div class="input">
+                <textarea name="inputText" id="inputText" placeholder="Enter the text you want to written in paper ..."
+                    autofocus></textarea>
+            </div>
+            <div class="options">
+                <div class="buttons">
+                    <input type="button" value="Upload Page" id="UploadPage" />
+                    <input type="button" value="Default Page" id="DefaultPage" />
+                    <input type="button" value="Change Font" id="ChangeFont" />
+                    <input type="button" value="Upload Font" id="UploadFont" />
+                    <input type="button" value="Download Page" id="DownloadPage" />
+                </div>
+                <div class="rangev1">
+                    <div class="itm">
+                        <label for="adjustX">Adjust X axis</label>
+                        <input type="range" name="adjustX" id="adjustX" value="28" min="0" max="100" />
+                    </div>
+                    <div class="itm">
+                        <label for="adjustY">Adjust Y axis</label>
+                        <input type="range" name="adjustY" id="adjustY" value="44" min="0" max="100" />
+                    </div>
+                    <div class="itm">
+                        <label for="adjfontSize">Font Size</label>
+                        <input type="range" name="fontSize" id="adjfontSize" value="22" min="12" max="100" />
+                    </div>
+                    <div class="itm">
+                        <label for="adjustWidth">width</label>
+                        <input type="range" name="adjustWidth" id="adjustWidth" value="720" min="50" max="850"
+                            step="0.3" />
+                    </div>
+                </div>
+                <div class="rangev2">
+                    <div class="itm">
+                        <label for="adjLetterSpacing">letter-spacing</label>
+                        <input type="range" name="letter-spacing" id="adjLetterSpacing" min="0" max="15" step="0.1"/>
+                    </div>
+                    <div class="itm">
+                        <label for="adjWordSpacing">word-spacing</label>
+                        <input type="range" name="word-spacing" id="adjWordSpacing" min="0" max="20" step="0.1"/>
+                    </div>
+                    <div class="itm">
+                        <label for="adjLineHeight">line-height</label>
+                        <input type="range" name="line-height" id="adjLineHeight" value="24" min="16" max="60" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="page">
+                <canvas id="canvas" width="750px" height="1000px"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/controls.js"></script>
+</body>
+
+</html>
