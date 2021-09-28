@@ -14,7 +14,7 @@ window.onload = draw();
 
 let text_input = document.getElementById("inputText");
 text_input.addEventListener("input", () => {
-//   console.log(text_input.value);
+  //   console.log(text_input.value);
   mydata = text_input.value;
   redraw();
 });
