@@ -1,3 +1,24 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background: #FFF;
+    color: #333;
+  }
+  #changeMode
+  {
+    color: #333;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #FFF;
+  }
+  #changeMode
+  {
+    color: #FFF;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +29,24 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+    /* background-color: #3d3d3d;
+    color: aliceblue; */
+    /* background-color: inherit; */
+}
+#nav
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center; */
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+#changeMode
+{
+  color: rgba(252, 70, 107, 1);
+  cursor: pointer;
+user-select: none;
 }
 main {
   max-width: 850px;
@@ -23,13 +62,28 @@ main {
 #inputText {
   width: 100%;
   height: 375px;
+  background-color: transparent;
+  color: inherit;
+  /* border: 2px solid #d3d3d3; */
+  border: 1px solid rgb(149, 149, 149);
+  /* border: 2px solid rgb(0, 225, 225); */
   font: 400 1rem var(--font-sans-serif);
   padding: 10px;
+  margin-bottom: 7px;
+  outline: none;
+  border-radius: 5px;
 }
+/* #inputText:hover, */
+#inputText:focus,
+#inputText:active {
+  border: 2px solid rgba(252, 70, 107, 1);
+}
+
 canvas {
   /* border: 2px solid red; */
   width: 100%;
   height: 100%;
+  margin-top: 15px;
 }
 
 .options > .buttons {
@@ -39,6 +93,8 @@ canvas {
 
   user-select: none;
   width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 @media screen and (max-width: 780px) {
   .options > .buttons {
@@ -50,12 +106,12 @@ canvas {
   margin: 5px 10px;
   background-color: rgba(252, 70, 107, 1);
   border: none;
-  padding: 10px;
+  padding: 12px 10px;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.5s;
   color: white;
-  border-radius: 5px;
+  border-radius: 7px;
   font-weight: 600;
   letter-spacing: 1.2px;
   font-family: "Ubuntu", sans-serif;
@@ -85,7 +141,7 @@ canvas {
   font-size: 10pt; */
 }
 
-/* rangev2 css */
+/* rangev1 css */
 .options > .rangev1 {
   display: flex;
   justify-content: space-between;
@@ -103,11 +159,12 @@ canvas {
   width: 100%;
   margin: 5px 10px;
   font-weight: 600;
+  letter-spacing: 1.5px;
 }
 .options > .rangev1 .itm > input {
   -webkit-appearance: none;
   width: 100%;
-  height: 25px;
+  height: var(--sliderHeight);
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -121,14 +178,14 @@ canvas {
 .options > .rangev1 .itm > input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: var(--sliderHeight);
+  height: var(--sliderHeight);
   background: rgb(0, 225, 225);
   cursor: pointer;
 }
 .options > .rangev1 .itm > input::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: var(--sliderHeight);
+  height: var(--sliderHeight);
   background: rgb(0, 225, 225);
   cursor: pointer;
 }
@@ -153,6 +210,7 @@ canvas {
   margin: 5px 10px;
   font-weight: 600;
   padding: 0px 25px;
+  letter-spacing: 1.5px;
 }
 @media screen and (max-width: 780px) {
   .options > .rangev2 .itm {
@@ -162,7 +220,7 @@ canvas {
 .options > .rangev2 .itm > input {
   -webkit-appearance: none;
   width: 100%;
-  height: 25px;
+  height: var(--sliderHeight);
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -176,14 +234,14 @@ canvas {
 .options > .rangev2 .itm > input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: var(--sliderHeight);
+  height: var(--sliderHeight);
   background: rgba(252, 70, 107, 1);
   cursor: pointer;
 }
 .options > .rangev2 .itm > input::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: var(--sliderHeight);
+  height: var(--sliderHeight);
   background: rgba(252, 70, 107, 1);
   cursor: pointer;
 }

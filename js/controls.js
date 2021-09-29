@@ -20,13 +20,11 @@ UploadPage.onclick = () => {
   // uploadPageBtn.style.display = "none";
   uploadPageBtn.click();
   // input.remove();
-  console.log(uploadPageBtn);
 
   uploadPageBtn.onchange = (evt) => {
     const [file] = uploadPageBtn.files;
     if (file) {
       imgSrc = URL.createObjectURL(file);
-      console.log(imgSrc);
       redraw();
     }
   };
@@ -61,7 +59,6 @@ UploadFont.onclick = () => {
   //   input.style.display = "none";
   uploadFontBtn.click();
   // input.remove();
-  console.log("UploadFont clicked");
 
   uploadFontBtn.onchange = (evt) => {
     const file = uploadFontBtn.files[0];
@@ -70,7 +67,6 @@ UploadFont.onclick = () => {
       "load",
       async function () {
         const font = new FontFace("myfont", "url(" + reader.result + ")");
-        console.log(font);
         // wait for font to be loaded
         await font.load();
         // add font to document
@@ -78,7 +74,6 @@ UploadFont.onclick = () => {
         // enable font with CSS class
         // document.body.classList.add("fonts-loaded");
         ctx.font = dfont;
-        console.log(ctx.font);
         ctx.fillStyle = "#00f";
         redraw();
       },
@@ -124,16 +119,13 @@ adjustWidth.oninput = () => {
 
 adjLetterSpacing.oninput = () => {
   canvas.style.letterSpacing = adjLetterSpacing.value + "px";
-  console.log(canvas.style.letterSpacing);
   ctx = canvas.getContext("2d");
   ctx.font = dfont;
   redraw();
-  console.log("adjadjLetterSpacing");
 };
 
 adjWordSpacing.oninput = () => {
   canvas.style.wordSpacing = adjWordSpacing.value + "px";
-  console.log(canvas.style.wordSpacing);
   ctx = canvas.getContext("2d");
   ctx.font = dfont;
   redraw();

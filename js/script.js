@@ -63,12 +63,10 @@ function drawText(context, text, x, y, line_width, line_height) {
 }
 
 async function loadFonts() {
-  console.log(fontindex);
   const font = new FontFace(
     "myfont",
     "url('fonts/font (" + fontindex + ").ttf')"
   );
-  console.log(font);
   // wait for font to be loaded
   await font.load();
   // add font to document
@@ -76,19 +74,14 @@ async function loadFonts() {
   // enable font with CSS class
   // document.body.classList.add("fonts-loaded");
   ctx.font = dfont;
-  console.log(ctx.font);
   ctx.fillStyle = "#00f";
   //   drawText(ctx, mydata, x, y, maxWidth, lineHeight);
   redraw();
 
-  console.log("font loaded");
-  console.log(canvas.width);
-  console.log(canvas.height);
   //   console.log(i);
 }
 async function defaultFontload() {
   const font = new FontFace("myfont", "url('fonts/font (0).ttf')");
-  console.log(font);
   // wait for font to be loaded
   await font.load();
   // add font to document
@@ -96,9 +89,8 @@ async function defaultFontload() {
   // enable font with CSS class
   // document.body.classList.add("fonts-loaded");
   ctx.font = dfont;
-  console.log(ctx.font);
   ctx.fillStyle = "#00f";
   drawText(ctx, mydata, x, y, maxWidth, lineHeight);
 
-  console.log("default font loaded");
+  // console.log("default font loaded");
 }
