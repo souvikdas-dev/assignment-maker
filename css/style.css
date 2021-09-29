@@ -1,21 +1,19 @@
 @media (prefers-color-scheme: light) {
   body {
-    background: #FFF;
+    background: #fff;
     color: #333;
   }
-  #changeMode
-  {
+  #changeMode {
     color: #333;
   }
 }
 @media (prefers-color-scheme: dark) {
   body {
     background: #333;
-    color: #FFF;
+    color: #fff;
   }
-  #changeMode
-  {
-    color: #FFF;
+  #changeMode {
+    color: #fff;
   }
 }
 
@@ -29,12 +27,9 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-    /* background-color: #3d3d3d;
-    color: aliceblue; */
-    /* background-color: inherit; */
 }
-#nav
-{
+
+#nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,11 +37,48 @@
   padding: 10px 25px;
   margin-bottom: 10px;
 }
-#changeMode
-{
+#nav .cname {
+  padding: 5px;
+  border-bottom: 3px solid rgb(0, 225, 225);
+}
+#nav .switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav #inputColor {
+  margin-right: 25px;
+  -webkit-appearance: none;
+  /* display: inline-block; */
+  height: 30px;
+  width: 30px;
+  border: 2px solid #fff;
+  border-color: tomato;
+  outline: none;
+  padding: 3px;
+  border-radius: 50%;
+
+  /* background-color: rgb(0, 225, 225); */
+  background-color: transparent;
+}
+#inputColor::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+#inputColor::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 415px) {
+  #nav #inputColor {
+    margin-right: 10px;
+  }
+}
+
+#changeMode {
   color: rgba(252, 70, 107, 1);
   cursor: pointer;
-user-select: none;
+  user-select: none;
 }
 main {
   max-width: 850px;
@@ -57,6 +89,20 @@ main {
   width: 100%;
 
   padding: 15px;
+  margin-bottom: 15px;
+}
+
+footer
+{
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  word-spacing: 1.5px;
+  text-align: center;
+  text-transform: capitalize;
+  /* background-color: rgba(252, 70, 107, 1); */
+  padding: 3px 0px;
+  line-height: 10px;
 }
 
 #inputText {

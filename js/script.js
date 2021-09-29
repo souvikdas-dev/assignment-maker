@@ -1,5 +1,6 @@
 let canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
+var inkColor = "blue";
 var imgSrc = "pages/page (0).jpg";
 var dfont = "22px myfont";
 var mydata =
@@ -74,7 +75,7 @@ async function loadFonts() {
   // enable font with CSS class
   // document.body.classList.add("fonts-loaded");
   ctx.font = dfont;
-  ctx.fillStyle = "#00f";
+  ctx.fillStyle = inkColor;
   //   drawText(ctx, mydata, x, y, maxWidth, lineHeight);
   redraw();
 
@@ -89,7 +90,7 @@ async function defaultFontload() {
   // enable font with CSS class
   // document.body.classList.add("fonts-loaded");
   ctx.font = dfont;
-  ctx.fillStyle = "#00f";
+  ctx.fillStyle = inkColor;
   drawText(ctx, mydata, x, y, maxWidth, lineHeight);
 
   // console.log("default font loaded");
