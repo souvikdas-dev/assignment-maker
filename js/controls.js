@@ -89,7 +89,7 @@ UploadFont.onclick = () => {
 DownloadPage.onclick = () => {
   var link = document.createElement("a");
   link.download = "page.png";
-  link.href = canvas.toDataURL("Image/png");
+  link.href = canvas.toDataURL("Image/png", 1.0);
   link.click();
   link.remove();
 };
