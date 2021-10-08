@@ -3,16 +3,10 @@
     background: #fff;
     color: #333;
   }
-  #changeMode {
-    color: #333;
-  }
 }
 @media (prefers-color-scheme: dark) {
   body {
     background: #333;
-    color: #fff;
-  }
-  #changeMode {
     color: #fff;
   }
 }
@@ -38,8 +32,29 @@
   margin-bottom: 10px;
 }
 #nav .cname {
+  display: inline-block;
   padding: 5px;
   border-bottom: 3px solid rgb(0, 225, 225);
+}
+.bxl-github {
+  cursor: pointer;
+}
+@media screen and (max-width: 420px) {
+  #nav .cname {
+    font-size: 18px;
+    padding-left: 0;
+  }
+}
+#githubbottom {
+  display: none;
+}
+@media screen and (max-width: 354px) {
+  #githubtop {
+    display: none;
+  }
+  #githubbottom {
+    display: inline-block;
+  }
 }
 #nav .switch {
   display: flex;
@@ -77,8 +92,8 @@
 
 #changeMode {
   color: rgba(252, 70, 107, 1);
-  cursor: pointer;
   user-select: none;
+  /* cursor: pointer; */
 }
 main {
   max-width: 850px;
@@ -92,8 +107,7 @@ main {
   margin-bottom: 15px;
 }
 
-footer
-{
+footer {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -126,26 +140,23 @@ footer
 }
 
 /* width */
-#inputText::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
+#inputText::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
 }
 /* Track */
-#inputText::-webkit-scrollbar-track
-{
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+#inputText::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
 /* Handle */
-#inputText::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	/* box-shadow: inset 0 0 6px rgba(252, 70, 107, 1); */
-	background-color: #555;
+#inputText::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* box-shadow: inset 0 0 6px rgba(252, 70, 107, 1); */
+  background-color: #555;
 }
 
 /* Handle on hover */
@@ -153,8 +164,7 @@ footer
 	background-color: rgba(252, 70, 107, 1);
 } */
 
-#page
-{
+#page {
   display: block;
   position: relative;
   /* overflow: hidden; */
@@ -306,3 +316,15 @@ canvas {
   background: rgba(252, 70, 107, 1);
   cursor: pointer;
 }
+/* @media screen and (max-width:576px) {
+  :root
+  {
+    --sliderHeight: 16px;
+  }
+  .options > .rangev1 {
+    width: 80%;
+  }
+  .options > .rangev2 {
+    width: 80%;
+  }
+} */
